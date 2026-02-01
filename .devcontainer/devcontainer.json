@@ -1,0 +1,22 @@
+{
+  "name": "Node.js + JavaScript",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+
+  "postCreateCommand": "node -v && npm -v",
+
+  "portsAttributes": {
+    "3000": {
+      "label": "Node App",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
